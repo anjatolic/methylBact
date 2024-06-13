@@ -1,0 +1,118 @@
+#!/bin/bash
+##
+## Submission script for PBS on CR2 
+## ------------------------------------------
+##
+## Follow the 6 steps below to configure your job
+## 
+## STEP 1:
+##
+## Enter a job name after the -N on the line below:
+##
+#PBS -N at_pb_mcrb
+##
+## STEP 2:
+##
+## Select the number of cpus/cores required by modifying the #PBS -l select line below
+##
+## Normally you select cpus in chunks of 16 cpus
+## The Maximum value for ncpus is 16 and mpiprocs MUST be the same value as ncpus.
+##
+## PLEASE NOTE
+## ===========
+## The standard matlab application does not run on more than one node
+## This select line must not be altered
+##
+#PBS -l select=1:ncpus=16:mpiprocs=16
+##
+## STEP 3:
+##
+## Select the correct queue by modifying the #PBS -q line below
+##
+## half_hour	-  30 minutes
+## one_hour	-   1 hour
+## three_hour   -   3 hours
+## six_hour     -   6 hours
+## half_day	-  12 hours
+## one_day	-  24 hours
+## two_day	-  48 hours
+## five_day	- 120 hours
+## ten_day	- 240 hours (by special arrangement)
+##
+#PBS -q two_day
+##
+## STEP 4:
+##
+## Replace the hpc@cranfield.ac.uk email address
+## with your Cranfield email address on the #PBS -M line below:
+## Your email address is NOT your username
+##
+#PBS -m abe 
+#PBS -M anja.toli.472@cranfield.ac.uk
+##
+## ====================================
+## DO NOT CHANGE THE LINES BETWEEN HERE
+## ====================================
+#PBS -l application=matlab
+#PBS -j oe
+#PBS -W sandbox=PRIVATE
+#PBS -k n
+ln -s $PWD $PBS_O_WORKDIR/$PBS_JOBID
+## Change to working directory
+cd $PBS_O_WORKDIR
+## Calculate number of CPUs
+export cpus=`cat $PBS_NODEFILE | wc -l`
+## ========
+## AND HERE
+## ========
+##
+## STEP 5: 
+## 
+## Load the production USE
+module use /apps/modules/all
+
+
+echo "---------------------------------------------------------------"
+echo ""
+# Start message
+echo ""
+date
+echo ""
+
+# Resources
+# Base folder
+base_folder="/mnt/beegfs/home/s434472/Thesis_AT"
+# Tools path
+tools_path="$base_folder/tools/pacbio_smrt_tools/smrtlink/smrtcmds/bin"
+# Input data path
+input_path="$base_folder/data/strep_agal"
+# Analysis outputs path
+xml_path="$base_folder/PB_analysis"
+#--------------------------------------------------------------------#
+# PacBio microbial genome analysis workflow                          #
+#--------------------------------------------------------------------#
+"$tools_path/pbcromwell" run pb_microbial_analysis \
+-e "$xml_path/NEM316reads.xml" \
+--task-option ipa2_genome_size=0 \
+--task-option ipa2_downsampled_coverage=0 \
+--nproc 4
+
+
+# Completion message
+echo ""
+echo "Done with ..."
+
+date
+
+##remember to purge modules between tools avoid confict of libraries
+##and potential errors. To do so type module purge below
+
+module purge 
+
+## Tidy up the log directory
+## DO NOT CHANGE THE LINE BELOW
+## ============================
+rm $PBS_O_WORKDIR/$PBS_JOBID
+#
+
+
