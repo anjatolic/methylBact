@@ -10,11 +10,14 @@ Scripts used in this project can be
 
 Pipelines:
 PacBio Microbial Genome Analysis workflow
+
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_wf.drawio.png)
 
 PacBio custom pipeline
+
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_custom.drawio.png)
 
 ONT - MicrobeMod
+
 ![Model](https://github.com/anjatolic/methylBact/blob/main/PipelineOverview%20ONT.png)
 
