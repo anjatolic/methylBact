@@ -17,7 +17,7 @@ PacBio custom pipeline
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_custom.drawio.png)
 
-ONT - MicrobeMod
+ONT - MicrobeMod https://github.com/cultivarium/MicrobeMod
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/PipelineOverview%20ONT.png)
 
