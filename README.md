@@ -1,6 +1,7 @@
 **Repository for MSc Applied Bioinformatics thesis by Anja Tolic**
 
 **Thesis title: Evaluating current bioinformatics tools ​for microbial epigenetics analysis​ in long-read sequencing data**
+
 Supervisors: Dr Tomasz Kurowski and Dr Alexey Larionov
 
 Abstract
