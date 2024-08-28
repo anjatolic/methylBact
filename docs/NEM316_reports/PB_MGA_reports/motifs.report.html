@@ -1,0 +1,197 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Report motifs</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                font-size: 2rem; /* Use rem for scalability */
+                max-width: 100vw; /* Ensure body doesn't exceed viewport width */
+            }
+            h1 {
+                color: #333;
+                font-size: 3rem; /* Use rem for scalability */
+            }
+            h2 {
+                font-size: 2.8rem;
+            }
+            h3 {
+                font-size: 2.6rem;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                font-size: 0.8rem;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+                word-wrap: break-word; /* Allow text to wrap within cells */
+            }
+            th {
+                background-color: #f4f4f4;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                max-height: 100vh; /* Ensure the image doesn't overflow the viewport height */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Report motifs</h1>
+    <h2>Modified Base Motifs</h2>
+<table>
+<thead>
+<tr>
+<th>Motif</th>
+<th>Modified Position</th>
+<th>Modification Type</th>
+<th>% of Motifs Detected</th>
+<th># of Motifs Detected</th>
+<th># of Motifs in Genome</th>
+<th>Mean QV</th>
+<th>Mean Coverage</th>
+<th>Partner Motif</th>
+<th>Mean IPD ratio</th>
+<th>Group Tag</th>
+<th>Objective Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CYSVNYR</td>
+<td>1</td>
+<td>m4C</td>
+<td>0.31612378</td>
+<td>6221</td>
+<td>19679</td>
+<td>85.05883</td>
+<td>419.59717</td>
+<td></td>
+<td>1.6069517</td>
+<td>CYSVNYR</td>
+<td>187694.3</td>
+</tr>
+<tr>
+<td>CYCATAWD</td>
+<td>1</td>
+<td>unknown</td>
+<td>0.27867204</td>
+<td>277</td>
+<td>994</td>
+<td>56.88809</td>
+<td>419.37183</td>
+<td></td>
+<td>1.4634299</td>
+<td>CYCATAWD</td>
+<td>4989.823</td>
+</tr>
+<tr>
+<td>GVGGCANCR</td>
+<td>3</td>
+<td>unknown</td>
+<td>0.4710145</td>
+<td>65</td>
+<td>138</td>
+<td>82.36923</td>
+<td>424.83078</td>
+<td></td>
+<td>1.6167691</td>
+<td>GVGGCANCR</td>
+<td>2719.0002</td>
+</tr>
+<tr>
+<td>GNAGTMCCVD</td>
+<td>3</td>
+<td>unknown</td>
+<td>0.2962963</td>
+<td>32</td>
+<td>108</td>
+<td>76.21875</td>
+<td>415.78125</td>
+<td></td>
+<td>1.635</td>
+<td>GNAGTMCCVD</td>
+<td>816.14136</td>
+</tr>
+<tr>
+<td>GAGNNAAAAWT</td>
+<td>2</td>
+<td>m6A</td>
+<td>0.23188406</td>
+<td>32</td>
+<td>138</td>
+<td>63.75</td>
+<td>406.90625</td>
+<td></td>
+<td>1.6562499</td>
+<td>GAGNNAAAAWT</td>
+<td>547.4872</td>
+</tr>
+<tr>
+<td>GACCGNNCCANNNA</td>
+<td>2</td>
+<td>m6A</td>
+<td>1.0</td>
+<td>7</td>
+<td>7</td>
+<td>73.28571</td>
+<td>420.0</td>
+<td></td>
+<td>1.5385715</td>
+<td>GACCGNNCCANNNA</td>
+<td>513.0</td>
+</tr>
+<tr>
+<td>CNNNGCNNANCGACT</td>
+<td>13</td>
+<td>m6A</td>
+<td>1.0</td>
+<td>5</td>
+<td>5</td>
+<td>61.6</td>
+<td>414.0</td>
+<td></td>
+<td>1.68</td>
+<td>CNNNGCNNANCGACT</td>
+<td>308.0</td>
+</tr>
+<tr>
+<td>AGTNAAAAANT</td>
+<td>1</td>
+<td>m6A</td>
+<td>0.21186441</td>
+<td>25</td>
+<td>118</td>
+<td>57.72</td>
+<td>425.56</td>
+<td></td>
+<td>1.5504001</td>
+<td>AGTNAAAAANT</td>
+<td>270.16104</td>
+</tr>
+</tbody>
+</table>
+<h2>Modification QVs</h2>
+<img src='motif_histogram.png' alt='Modification QVs' />
+<h2>ModQV Versus Coverage By Motif</h2>
+<img src='motif_modqv_coverage_CYSVNYR.png' alt='None' />
+<img src='motif_modqv_coverage_CYCATAWD.png' alt='None' />
+<img src='motif_modqv_coverage_GVGGCANCR.png' alt='None' />
+<img src='motif_modqv_coverage_GNAGTMCCVD.png' alt='None' />
+<img src='motif_modqv_coverage_GAGNNAAAAWT.png' alt='None' />
+<img src='motif_modqv_coverage_GACCGNNCCANNNA.png' alt='None' />
+<img src='motif_modqv_coverage_CNNNGCNNANCGACT.png' alt='None' />
+<img src='motif_modqv_coverage_AGTNAAAAANT.png' alt='None' />
+<img src='motif_modqv_coverage_NoMotif.png' alt='None' />
+
+    </body>
+    </html>
+    

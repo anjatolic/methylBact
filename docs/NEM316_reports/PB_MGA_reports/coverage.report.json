@@ -1,0 +1,122 @@
+{
+    "_comment": "Generated with pbcommand version  at 2024-06-05T22:53:35.289645",
+    "attributes": [
+        {
+            "id": "coverage.depth_coverage_mean",
+            "name": "Mean Coverage",
+            "value": 838.6672910665991
+        },
+        {
+            "id": "coverage.missing_bases_pct",
+            "name": "Missing Bases",
+            "value": 0.0012091800808213095
+        }
+    ],
+    "dataset_uuids": [
+        "ecc101ff-0944-20d8-9a96-680674c119bf"
+    ],
+    "id": "coverage",
+    "plotGroups": [
+        {
+            "id": "coverage.coverage_plots",
+            "legend": null,
+            "plots": [
+                {
+                    "caption": "Coverage Across ctg.s1/p/l/000000/0.",
+                    "id": "coverage.coverage_plots.coverage_contig_0",
+                    "image": "coverage_plot_ctg.s1__p__l__000000__0.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across ctg.s1/p/l/000000/0."
+                },
+                {
+                    "caption": "Coverage Across ctg.s1/p/l/000001/0.",
+                    "id": "coverage.coverage_plots.coverage_contig_1",
+                    "image": "coverage_plot_ctg.s1__p__l__000001__0.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across ctg.s1/p/l/000001/0."
+                },
+                {
+                    "caption": "Coverage Across ctg.s1/p/l/000002/0.",
+                    "id": "coverage.coverage_plots.coverage_contig_2",
+                    "image": "coverage_plot_ctg.s1__p__l__000002__0.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across ctg.s1/p/l/000002/0."
+                },
+                {
+                    "caption": "Coverage Across ctg.s2/p/l/000000/0.",
+                    "id": "coverage.coverage_plots.coverage_contig_3",
+                    "image": "coverage_plot_ctg.s2__p__l__000000__0.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across ctg.s2/p/l/000000/0."
+                },
+                {
+                    "caption": "Coverage Across ctg.s2/p/l/000001/0.",
+                    "id": "coverage.coverage_plots.coverage_contig_4",
+                    "image": "coverage_plot_ctg.s2__p__l__000001__0.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across ctg.s2/p/l/000001/0."
+                },
+                {
+                    "caption": "Coverage Across ctg.s2/p/l/000002/0.",
+                    "id": "coverage.coverage_plots.coverage_contig_5",
+                    "image": "coverage_plot_ctg.s2__p__l__000002__0.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across ctg.s2/p/l/000002/0."
+                },
+                {
+                    "caption": "Coverage Across ctg.s2/p/l/000004/0.",
+                    "id": "coverage.coverage_plots.coverage_contig_6",
+                    "image": "coverage_plot_ctg.s2__p__l__000004__0.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across ctg.s2/p/l/000004/0."
+                }
+            ],
+            "thumbnail": null,
+            "title": "Coverage Across Reference"
+        },
+        {
+            "id": "coverage.coverage_histogram_plot_group",
+            "legend": null,
+            "plots": [
+                {
+                    "caption": "Depth of Coverage Distribution ",
+                    "id": "coverage.coverage_histogram_plot_group.coverage_histogram",
+                    "image": "coverage_histogram.png",
+                    "plotType": "image",
+                    "thumbnail": "coverage_histogram_thumb.png",
+                    "title": "Depth of Coverage Distribution "
+                }
+            ],
+            "thumbnail": "coverage_histogram_thumb.png",
+            "title": "Depth of Coverage"
+        },
+        {
+            "id": "coverage.gc_coverage_plot_group",
+            "legend": null,
+            "plots": [
+                {
+                    "caption": "Coverage vs. [GC] Content",
+                    "id": "coverage.gc_coverage_plot_group.gc_coverage_boxplot",
+                    "image": "gc_coverage_boxplot.png",
+                    "plotType": "image",
+                    "thumbnail": "gc_coverage_boxplot_thumb.png",
+                    "title": "Coverage vs. [GC] Content"
+                }
+            ],
+            "thumbnail": "gc_coverage_boxplot_thumb.png",
+            "title": "Coverage vs. [GC] Content"
+        }
+    ],
+    "tables": [],
+    "tags": [],
+    "title": "Report coverage",
+    "uuid": "d0920353-1da0-436d-a00e-8a415f2c2c63",
+    "version": "1.0.1"
+}
