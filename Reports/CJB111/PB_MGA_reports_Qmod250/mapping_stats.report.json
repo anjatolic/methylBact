@@ -1,0 +1,52 @@
+{
+    "_comment": "Created by pbcopper v2.5.0",
+    "attributes": [
+        {
+            "id": "mapped_reads_n",
+            "name": "Mapped Reads",
+            "value": 483768
+        },
+        {
+            "id": "mapped_alignments_n",
+            "name": "Alignments",
+            "value": 487720
+        },
+        {
+            "id": "mapped_bases_n",
+            "name": "Mapped Bases",
+            "value": 2489997455
+        },
+        {
+            "id": "blast_identity",
+            "name": "Mean Sequence Identity",
+            "value": 99.9003387522906
+        },
+        {
+            "id": "pb_identity",
+            "name": "Mean Mapped Concordance",
+            "value": 99.8987863108146
+        },
+        {
+            "id": "gap_compressed_identity",
+            "name": "Mean Gap-Compressed Sequence Identity",
+            "value": 99.9165745835519
+        },
+        {
+            "id": "mapped_readlength_mean",
+            "name": "Mean Mapped Read Length",
+            "value": 5105.383119412778
+        },
+        {
+            "id": "mapped_readlength_max",
+            "name": "Max Mapped Read Length",
+            "value": 22079
+        }
+    ],
+    "dataset_uuids": [],
+    "id": "mapping_stats",
+    "plotGroups": [],
+    "tables": [],
+    "title": "Mapping Statistics",
+    "uuid": "d496c2d5-2b45-4810-979e-4d8d89ab55c7",
+    "version": "1.0.1"
+}

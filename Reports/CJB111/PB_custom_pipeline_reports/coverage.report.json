@@ -1,0 +1,74 @@
+{
+    "_comment": "Generated with pbcommand version  at 2024-06-21T18:17:46.868365",
+    "attributes": [
+        {
+            "id": "coverage.depth_coverage_mean",
+            "name": "Mean Coverage",
+            "value": 1214.5007516756314
+        },
+        {
+            "id": "coverage.missing_bases_pct",
+            "name": "Missing Bases",
+            "value": 0.0
+        }
+    ],
+    "dataset_uuids": [
+        "4e438c7c-7825-11ad-b004-482cd55b49c6"
+    ],
+    "id": "coverage",
+    "plotGroups": [
+        {
+            "id": "coverage.coverage_plots",
+            "legend": null,
+            "plots": [
+                {
+                    "caption": "Coverage Across CP063198.2.",
+                    "id": "coverage.coverage_plots.coverage_contig_0",
+                    "image": "coverage_plot_CP063198.2.png",
+                    "plotType": "image",
+                    "thumbnail": null,
+                    "title": "Coverage Across CP063198.2."
+                }
+            ],
+            "thumbnail": null,
+            "title": "Coverage Across Reference"
+        },
+        {
+            "id": "coverage.coverage_histogram_plot_group",
+            "legend": null,
+            "plots": [
+                {
+                    "caption": "Depth of Coverage Distribution ",
+                    "id": "coverage.coverage_histogram_plot_group.coverage_histogram",
+                    "image": "coverage_histogram.png",
+                    "plotType": "image",
+                    "thumbnail": "coverage_histogram_thumb.png",
+                    "title": "Depth of Coverage Distribution "
+                }
+            ],
+            "thumbnail": "coverage_histogram_thumb.png",
+            "title": "Depth of Coverage"
+        },
+        {
+            "id": "coverage.gc_coverage_plot_group",
+            "legend": null,
+            "plots": [
+                {
+                    "caption": "Coverage vs. [GC] Content",
+                    "id": "coverage.gc_coverage_plot_group.gc_coverage_boxplot",
+                    "image": "gc_coverage_boxplot.png",
+                    "plotType": "image",
+                    "thumbnail": "gc_coverage_boxplot_thumb.png",
+                    "title": "Coverage vs. [GC] Content"
+                }
+            ],
+            "thumbnail": "gc_coverage_boxplot_thumb.png",
+            "title": "Coverage vs. [GC] Content"
+        }
+    ],
+    "tables": [],
+    "tags": [],
+    "title": "Report coverage",
+    "uuid": "6853923d-d269-4fca-8f44-b065b98511d5",
+    "version": "1.0.1"
+}
