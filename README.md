@@ -10,17 +10,19 @@ Microbial DNA methylation is targeted to specific sequence motifs and can play d
 </p>
 
 Scripts used in this project can be found in scripts folder.
+This repository contains scripts used for analysing DNA methylation in bacteria. Following pipelines were used for the analysis:
 
-Pipelines:
-PacBio Microbial Genome Analysis workflow
+**Pipelines:**
+
+**PacBio Microbial Genome Analysis workflow**
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_wf.drawio.png)
 
-PacBio custom pipeline
+**PacBio custom pipeline**
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_custom.drawio.png)
 
-ONT - MicrobeMod https://github.com/cultivarium/MicrobeMod
+**ONT - MicrobeMod https://github.com/cultivarium/MicrobeMod**
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/PipelineOverview%20ONT.png)
 
