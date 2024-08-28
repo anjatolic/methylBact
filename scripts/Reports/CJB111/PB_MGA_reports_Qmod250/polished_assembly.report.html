@@ -1,0 +1,248 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Report polished_assembly</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                font-size: 2rem; /* Use rem for scalability */
+                max-width: 100vw; /* Ensure body doesn't exceed viewport width */
+            }
+            h1 {
+                color: #333;
+                font-size: 3rem; /* Use rem for scalability */
+            }
+            h2 {
+                font-size: 2.8rem;
+            }
+            h3 {
+                font-size: 2.6rem;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                font-size: 0.8rem;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+                word-wrap: break-word; /* Allow text to wrap within cells */
+            }
+            th {
+                background-color: #f4f4f4;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                max-height: 100vh; /* Ensure the image doesn't overflow the viewport height */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Report polished_assembly</h1>
+    <h2>Summary Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Contig Type</th>
+<th>Polished Contigs</th>
+<th>Maximum Contig Length</th>
+<th>Mean Contig Length</th>
+<th>Median Contig Length</th>
+<th>N50 Contig Length</th>
+<th>Sum of Contig Lengths</th>
+<th>E-size (sum of squares / sum)</th>
+<th>Number of Circular Contigs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Contigs</td>
+<td>20</td>
+<td>1254408</td>
+<td>117600</td>
+<td>11996</td>
+<td>1254408</td>
+<td>2352010</td>
+<td>796092.8685252188</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Haplotigs</td>
+<td>69</td>
+<td>17760</td>
+<td>9397</td>
+<td>10368</td>
+<td>11819</td>
+<td>648427</td>
+<td>11178.46784449136</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2>Polished Contigs</h2>
+<table>
+<thead>
+<tr>
+<th>Contig</th>
+<th>Length (bases)</th>
+<th>Circular</th>
+<th>Percent Polished</th>
+<th>Number of Polishing Reads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctg.s1/p/l/000000/0</td>
+<td>1254408</td>
+<td>No</td>
+<td>1.0</td>
+<td>141561</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000001/0</td>
+<td>409436</td>
+<td>No</td>
+<td>0.996359</td>
+<td>57291</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000002/0</td>
+<td>302090</td>
+<td>No</td>
+<td>1.0</td>
+<td>32140</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000003/0</td>
+<td>193003</td>
+<td>No</td>
+<td>1.0</td>
+<td>24826</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000004/0</td>
+<td>21867</td>
+<td>No</td>
+<td>1.0</td>
+<td>1172</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000005/0</td>
+<td>21183</td>
+<td>No</td>
+<td>1.0</td>
+<td>2954</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000007/0</td>
+<td>18529</td>
+<td>No</td>
+<td>1.0</td>
+<td>2712</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000006/0</td>
+<td>18251</td>
+<td>No</td>
+<td>1.0</td>
+<td>5067</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000008/0</td>
+<td>13561</td>
+<td>No</td>
+<td>1.0</td>
+<td>3029</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000010/0</td>
+<td>11996</td>
+<td>No</td>
+<td>1.0</td>
+<td>1824</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000009/0</td>
+<td>11410</td>
+<td>No</td>
+<td>1.0</td>
+<td>829</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000011/0</td>
+<td>11387</td>
+<td>No</td>
+<td>1.0</td>
+<td>1699</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000012/0</td>
+<td>9539</td>
+<td>No</td>
+<td>1.0</td>
+<td>1285</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000014/0</td>
+<td>9116</td>
+<td>No</td>
+<td>1.0</td>
+<td>924</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000016/0</td>
+<td>8901</td>
+<td>No</td>
+<td>1.0</td>
+<td>551</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000013/0</td>
+<td>8802</td>
+<td>No</td>
+<td>1.0</td>
+<td>579</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000015/0</td>
+<td>8557</td>
+<td>No</td>
+<td>1.0</td>
+<td>891</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000017/0</td>
+<td>8358</td>
+<td>No</td>
+<td>1.0</td>
+<td>732</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000018/0</td>
+<td>6187</td>
+<td>No</td>
+<td>1.0</td>
+<td>518</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000019/0</td>
+<td>5429</td>
+<td>No</td>
+<td>1.0</td>
+<td>620</td>
+</tr>
+</tbody>
+</table>
+<h2>Contig Length Distribution</h2>
+<img src='contig_lengths_hist.png' alt='Contig Length Distribution' />
+
+    </body>
+    </html>
+    
