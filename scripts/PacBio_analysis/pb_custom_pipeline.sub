@@ -1,0 +1,142 @@
+#!/bin/bash
+##
+## Submission script for PBS on CR2 
+## ------------------------------------------
+##
+## Follow the 6 steps below to configure your job
+## 
+## STEP 1:
+##
+## Enter a job name after the -N on the line below:
+##
+#PBS -N at_s434472
+##
+## STEP 2:
+##
+## Select the number of cpus/cores required by modifying the #PBS -l select line below
+##
+## Normally you select cpus in chunks of 16 cpus
+## The Maximum value for ncpus is 16 and mpiprocs MUST be the same value as ncpus.
+##
+## PLEASE NOTE
+## ===========
+## The standard matlab application does not run on more than one node
+## This select line must not be altered
+##
+#PBS -l select=1:ncpus=16:mpiprocs=16
+##
+## STEP 3:
+##
+## Select the correct queue by modifying the #PBS -q line below
+##
+## half_hour	-  30 minutes
+## one_hour	-   1 hour
+## three_hour   -   3 hours
+## six_hour     -   6 hours
+## half_day	-  12 hours
+## one_day	-  24 hours
+## two_day	-  48 hours
+## five_day	- 120 hours
+## ten_day	- 240 hours (by special arrangement)
+##
+#PBS -q two_day
+##
+## STEP 4:
+##
+## Replace the hpc@cranfield.ac.uk email address
+## with your Cranfield email address on the #PBS -M line below:
+## Your email address is NOT your username
+##
+#PBS -m abe 
+#PBS -M anja.toli.472@cranfield.ac.uk
+##
+## ====================================
+## DO NOT CHANGE THE LINES BETWEEN HERE
+## ====================================
+#PBS -l application=matlab
+#PBS -j oe
+#PBS -W sandbox=PRIVATE
+#PBS -k n
+ln -s $PWD $PBS_O_WORKDIR/$PBS_JOBID
+## Change to working directory
+cd $PBS_O_WORKDIR
+## Calculate number of CPUs
+export cpus=`cat $PBS_NODEFILE | wc -l`
+## ========
+## AND HERE
+## ========
+##
+## STEP 5: 
+## 
+## Load the production USE
+module use /apps2/modules/all
+module load SAMtools
+
+echo "---------------------------------------------------------------"
+echo ""
+# Start message
+echo ""
+date
+echo ""
+
+# Resources
+# Base folder
+base_folder="/mnt/beegfs/home/s434472/Thesis_AT"
+# Tools path
+tools_path="$base_folder/tools/pacbio_smrt_tools/smrtlink/smrtcmds/bin"
+# Input data path
+input_path="$base_folder/data/strep_agal/CJB111"
+# Data path
+path="$base_folder/PB_analysis/Step_by_step/CJB111"
+#--------------------------------------------------------------------#
+# Custom pipeline for DNA methylation analysis in bacteria           #
+#--------------------------------------------------------------------#
+echo "Spliting double-strand reads to singl-strand (with ip and pw tags) with ccs-kinetics-bystrandify and creating xml"
+"$tools_path/ccs-kinetics-bystrandify" "$input_path/CJB111reads.bam" "$path/CJB111_strandify.bam"
+
+echo "Creating reference .xml from fasta"
+"$tools_path/dataset" create --generateIndices --type ReferenceSet --name CJB111_ref "$path/CJB111_ref.xml" "$input_path/CJB111_ref.fasta"
+
+echo "Creating CCS .xml from strandified bam"
+"$tools_path/dataset" create --generateIndices --name CJB111_strandify "$path/CJB111_strandify.xml" "$path/CJB111_strandify.bam"
+
+echo "HiFi mapping started by pb_align_ccs"
+"$tools_path/pbcromwell" run --output-dir "$path/Hifi_mapping" --nproc 12  pb_align_ccs \
+      -e "$path/CJB111_strandify.xml" \
+      -e "$path/CJB111_ref.xml" \
+      --task-option mapping_pbmm2_overrides="--sort"
+
+echo "Making PacBio index"
+"$tools_path/pbindex" "$path/Hifi_mapping/outputs/mapped.bam"
+
+echo "Identifying modifications"
+"$tools_path/ipdSummary" "$path/Hifi_mapping/outputs/mapped.bam" --reference "$input_path/CJB111_ref.fasta" --identify m6A,m4C --gff CJB111_ipdSum_mods.gff --csv CJB111_ipdSum_mods.csv --bigwig CJB111_ipdSum_mods.bw --log-file CJB111_ipdSum.log --methylFraction
+
+echo "Identifying modified motifs"
+"$tools_path/motifMaker" find -f "$input_path/CJB111_ref.fasta" -g "$path/CJB111_ipdSum_mods.gff" -o "$path/CJB111_motifs.csv" -j 12  
+# Change --minScore value in motifMaker find if Qmod threshold has to be changed
+"$tools_path/motifMaker" reprocess -c "$path/CJB111_ipdSum_mods.csv" -f "$input_path/CJB111_ref.fasta" -g "$path/CJB111_ipdSum_mods.gff" -m "$path/CJB111_motifs.csv" -o "$path/CJB111_motifs.gff"
+# Change --minFraction value in motifMaker reprocess if needed 
+ 
+echo "Summarizing modifications"
+"$tools_path/summarizeModifications" --log-file CJB111_modSummary.log "$path/CJB111_ipdSum_mods.gff" "$path/Hifi_mapping/outputs/coverage.gff" "$path/CJB111_modSummary.gff"   
+
+
+# Completion message
+echo ""
+echo "Done"
+
+date
+
+##remember to purge modules between tools avoid confict of libraries
+##and potential errors. To do so type module purge below
+
+module purge 
+
+## Tidy up the log directory
+## DO NOT CHANGE THE LINE BELOW
+## ============================
+rm $PBS_O_WORKDIR/$PBS_JOBID
+#
+
+
