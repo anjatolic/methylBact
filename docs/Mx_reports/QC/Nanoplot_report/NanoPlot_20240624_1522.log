@@ -1,0 +1,24 @@
+2024-06-24 15:22:00,631 NanoPlot 1.42.0 started with arguments Namespace(threads=2, verbose=False, store=False, raw=False, huge=False, outdir='/mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=False, title=None, font_scale=1, dpi=100, hide_stats=False, fastq=['/mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/mx_ccs.fastq.gz'], fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=None, cram=None, pickle=None, feather=None, path='/mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/')
+2024-06-24 15:22:00,632 Python version is: 3.10.14 | packaged by conda-forge | (main, Mar 20 2024, 12:45:18) [GCC 12.3.0]
+2024-06-24 15:22:00,754 Nanoget: Starting to collect statistics from plain fastq file.
+2024-06-24 15:22:00,755 Nanoget: Decompressing gzipped fastq /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/mx_ccs.fastq.gz
+2024-06-24 15:23:03,553 Reduced DataFrame memory usage from 1.910736083984375Mb to 1.910736083984375Mb
+2024-06-24 15:23:03,581 Nanoget: Gathered all metrics of 125214 reads
+2024-06-24 15:23:03,694 Calculated statistics
+2024-06-24 15:23:03,696 Using sequenced read lengths for plotting.
+2024-06-24 15:23:03,722 NanoPlot:  Valid color #4CB391.
+2024-06-24 15:23:03,724 NanoPlot:  Valid colormap Greens.
+2024-06-24 15:23:03,729 NanoPlot:  Creating length plots for Read length.
+2024-06-24 15:23:03,730 NanoPlot:  Using 125214 reads maximum of 20466bp.
+2024-06-24 15:23:07,426 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/WeightedHistogramReadlength  as png (or png for --legacy)
+2024-06-24 15:23:08,994 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/WeightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2024-06-24 15:23:10,707 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/Non_weightedHistogramReadlength  as png (or png for --legacy)
+2024-06-24 15:23:12,183 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/Non_weightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2024-06-24 15:23:20,281 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/Yield_By_Length  as png (or png for --legacy)
+2024-06-24 15:23:20,283 Created length plots
+2024-06-24 15:23:20,285 NanoPlot: Creating Read lengths vs Average read quality plots using 125214 reads.
+2024-06-24 15:23:22,743 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/LengthvsQualityScatterPlot_dot  as png (or png for --legacy)
+2024-06-24 15:23:25,827 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/Nanoplot_mx/LengthvsQualityScatterPlot_kde  as png (or png for --legacy)
+2024-06-24 15:23:25,829 Created LengthvsQual plot
+2024-06-24 15:23:25,830 Writing html report.
+2024-06-24 15:23:25,867 Finished!

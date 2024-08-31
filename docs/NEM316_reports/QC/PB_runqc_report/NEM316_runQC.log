@@ -1,0 +1,4 @@
+[WARNING] 2024-06-05 14:15:55,466Z [pbreports.report.ccs2 _to_plot_groups 453] numPasses requires ZMW metrics JSON, skipping this plot
+[WARNING] 2024-06-05 14:15:58,571Z [pbreports.tasks.runqc_reports to_runqc_reports 131] RunQC reports require sts.xml, skipping
+[WARNING] 2024-06-05 14:27:43,488Z [pbreports.report.ccs2 _to_plot_groups 453] numPasses requires ZMW metrics JSON, skipping this plot
+[WARNING] 2024-06-05 14:27:46,874Z [pbreports.tasks.runqc_reports to_runqc_reports 131] RunQC reports require sts.xml, skipping

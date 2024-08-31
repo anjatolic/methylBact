@@ -1,0 +1,189 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CCS Analysis Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                font-size: 2rem; /* Use rem for scalability */
+                max-width: 100vw; /* Ensure body doesn't exceed viewport width */
+            }
+            h1 {
+                color: #333;
+                font-size: 3rem; /* Use rem for scalability */
+            }
+            h2 {
+                font-size: 2.8rem;
+            }
+            h3 {
+                font-size: 2.6rem;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                font-size: 0.8rem;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+                word-wrap: break-word; /* Allow text to wrap within cells */
+            }
+            th {
+                background-color: #f4f4f4;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                max-height: 100vh; /* Ensure the image doesn't overflow the viewport height */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CCS Analysis Report</h1>
+    <h2>Attributes</h2>
+<ul>
+<li>HiFi reads: 182906</li>
+<li>HiFi reads yield: 938683304</li>
+<li>HiFi reads length (mean): 5132</li>
+<li>HiFi reads length (median, bp): 4848</li>
+<li>HiFi Read Length N50 (bp): 5698</li>
+<li>HiFi Read Quality (median): Q46</li>
+<li>HiFi Read Quality (median): 46</li>
+</ul>
+<h2>HiFi Read Length Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Read Length (kb)</th>
+<th>Reads</th>
+<th>Reads (%)</th>
+<th>Yield (Gb)</th>
+<th>Yield (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>≥ 0</td>
+<td>182906</td>
+<td>100.0</td>
+<td>938683304</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>≥ 5,000</td>
+<td>86323</td>
+<td>47.19528063595508</td>
+<td>589126584</td>
+<td>62.760952654592</td>
+</tr>
+<tr>
+<td>≥ 10,000</td>
+<td>3456</td>
+<td>1.8894951505144717</td>
+<td>37905249</td>
+<td>4.038129669343729</td>
+</tr>
+<tr>
+<td>≥ 15,000</td>
+<td>12</td>
+<td>0.006560747050397471</td>
+<td>195447</td>
+<td>0.02082139941843474</td>
+</tr>
+<tr>
+<td>≥ 20,000</td>
+<td>0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>≥ 25,000</td>
+<td>0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>≥ 30,000</td>
+<td>0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>≥ 35,000</td>
+<td>0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>≥ 40,000</td>
+<td>0</td>
+<td>0.0</td>
+<td>0</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+<h2>HiFi Read Quality Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Read Quality (Phred)</th>
+<th>Reads</th>
+<th>Reads (%)</th>
+<th>Yield (Gb)</th>
+<th>Yield (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>≥ Q20</td>
+<td>182906</td>
+<td>100.0</td>
+<td>938683304</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>≥ Q30</td>
+<td>159369</td>
+<td>87.13164138956623</td>
+<td>807425306</td>
+<td>86.01679635286237</td>
+</tr>
+<tr>
+<td>≥ Q40</td>
+<td>119722</td>
+<td>65.45547986397384</td>
+<td>585951426</td>
+<td>62.422696078974894</td>
+</tr>
+<tr>
+<td>≥ Q50</td>
+<td>81614</td>
+<td>44.62073414759494</td>
+<td>364123948</td>
+<td>38.790926231281944</td>
+</tr>
+</tbody>
+</table>
+<h2>Read Length Distribution</h2>
+<h3>HiFi read length distribution</h3><img src='ccs_hifi_readlength_hist_plot.png' alt='HiFi read length distribution' />
+<h3>Yield by HiFi Read Length</h3><img src='ccs_hifi_read_length_yield_plot.png' alt='Yield by HiFi Read Length' />
+<h3>Read length distribution</h3><img src='ccs_all_readlength_hist_plot.png' alt='Read length distribution' />
+<h2>Read Quality Distribution</h2>
+<img src='ccs_accuracy_hist.png' alt='Read Quality Distribution' />
+<h2>Predicted Accuracy vs. Read Length</h2>
+<img src='readlength_qv_hist2d.hexbin.png' alt='Predicted Accuracy vs. Read Length' />
+
+    </body>
+    </html>
+    
