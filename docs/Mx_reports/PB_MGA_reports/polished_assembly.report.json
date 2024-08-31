@@ -1,0 +1,379 @@
+{
+    "_comment": "Generated with pbcommand version  at 2024-06-24T16:36:10.893759",
+    "attributes": [],
+    "dataset_uuids": [],
+    "id": "polished_assembly",
+    "plotGroups": [
+        {
+            "id": "polished_assembly.contig_lengths_group",
+            "legend": null,
+            "plots": [
+                {
+                    "caption": "Contig Length Distribution",
+                    "id": "polished_assembly.contig_lengths_group.contig_lengths_hist",
+                    "image": "contig_lengths_hist.png",
+                    "plotType": "image",
+                    "thumbnail": "contig_lengths_hist_thumb.png",
+                    "title": "Contig Length Distribution"
+                }
+            ],
+            "thumbnail": "contig_lengths_hist_thumb.png",
+            "title": "Contig Length Distribution"
+        }
+    ],
+    "tables": [
+        {
+            "columns": [
+                {
+                    "header": "Contig Type",
+                    "id": "polished_assembly.summary_metrics.contig_type",
+                    "values": [
+                        "Primary Contigs",
+                        "Haplotigs"
+                    ]
+                },
+                {
+                    "header": "Polished Contigs",
+                    "id": "polished_assembly.summary_metrics.polished_contigs",
+                    "values": [
+                        47,
+                        63
+                    ]
+                },
+                {
+                    "header": "Maximum Contig Length",
+                    "id": "polished_assembly.summary_metrics.max_contig_length",
+                    "values": [
+                        996568,
+                        19498
+                    ]
+                },
+                {
+                    "header": "Mean Contig Length",
+                    "id": "polished_assembly.summary_metrics.mean_contig_length",
+                    "values": [
+                        198546,
+                        11270
+                    ]
+                },
+                {
+                    "header": "Median Contig Length",
+                    "id": "polished_assembly.summary_metrics.median_contig_length",
+                    "values": [
+                        148751,
+                        11144
+                    ]
+                },
+                {
+                    "header": "N50 Contig Length",
+                    "id": "polished_assembly.summary_metrics.n_50_contig_length",
+                    "values": [
+                        309811,
+                        12764
+                    ]
+                },
+                {
+                    "header": "Sum of Contig Lengths",
+                    "id": "polished_assembly.summary_metrics.sum_contig_lengths",
+                    "values": [
+                        9331677,
+                        710062
+                    ]
+                },
+                {
+                    "header": "E-size (sum of squares / sum)",
+                    "id": "polished_assembly.summary_metrics.esize",
+                    "values": [
+                        368836.50423509086,
+                        12546.758775994209
+                    ]
+                },
+                {
+                    "header": "Number of Circular Contigs",
+                    "id": "polished_assembly.summary_metrics.n_circular_contigs",
+                    "values": [
+                        0,
+                        null
+                    ]
+                }
+            ],
+            "id": "polished_assembly.summary_metrics",
+            "title": "Summary Metrics"
+        },
+        {
+            "columns": [
+                {
+                    "header": "Contig",
+                    "id": "polished_assembly.contigs_table.contig",
+                    "values": [
+                        "ctg.s1/p/l/000000/0",
+                        "ctg.s1/p/l/000001/0",
+                        "ctg.s1/p/l/000002/0",
+                        "ctg.s1/p/l/000003/0",
+                        "ctg.s1/p/l/000004/0",
+                        "ctg.s1/p/l/000005/0",
+                        "ctg.s1/p/l/000006/0",
+                        "ctg.s1/p/l/000007/0",
+                        "ctg.s1/p/l/000008/0",
+                        "ctg.s1/p/l/000009/0",
+                        "ctg.s1/p/l/000010/0",
+                        "ctg.s1/p/l/000011/0",
+                        "ctg.s1/p/l/000012/0",
+                        "ctg.s1/p/l/000013/0",
+                        "ctg.s1/p/l/000014/0",
+                        "ctg.s1/p/l/000015/0",
+                        "ctg.s1/p/l/000016/0",
+                        "ctg.s1/p/l/000017/0",
+                        "ctg.s1/p/l/000018/0",
+                        "ctg.s1/p/l/000019/0",
+                        "ctg.s1/p/l/000020/0",
+                        "ctg.s1/p/l/000021/0",
+                        "ctg.s1/p/l/000022/0",
+                        "ctg.s1/p/l/000023/0",
+                        "ctg.s1/p/l/000024/0",
+                        "ctg.s1/p/l/000025/0",
+                        "ctg.s1/p/l/000026/0",
+                        "ctg.s1/p/l/000027/0",
+                        "ctg.s1/p/l/000028/0",
+                        "ctg.s1/p/l/000029/0",
+                        "ctg.s1/p/l/000030/0",
+                        "ctg.s1/p/l/000031/0",
+                        "ctg.s1/p/l/000032/0",
+                        "ctg.s1/p/l/000033/0",
+                        "ctg.s1/p/l/000034/0",
+                        "ctg.s1/p/l/000035/0",
+                        "ctg.s1/p/l/000036/0",
+                        "ctg.s1/p/l/000037/0",
+                        "ctg.s1/p/l/000038/0",
+                        "ctg.s1/p/l/000039/0",
+                        "ctg.s1/p/l/000040/0",
+                        "ctg.s1/p/l/000041/0",
+                        "ctg.s1/p/l/000042/0",
+                        "ctg.s1/p/l/000043/0",
+                        "ctg.s1/p/l/000044/0",
+                        "ctg.s1/p/l/000045/0",
+                        "ctg.s1/p/l/000046/0"
+                    ]
+                },
+                {
+                    "header": "Length (bases)",
+                    "id": "polished_assembly.contigs_table.length",
+                    "values": [
+                        996568,
+                        557444,
+                        516981,
+                        488324,
+                        467118,
+                        379215,
+                        361771,
+                        350392,
+                        349370,
+                        309811,
+                        282544,
+                        265126,
+                        264499,
+                        263427,
+                        253424,
+                        231761,
+                        223982,
+                        186107,
+                        183286,
+                        168908,
+                        165066,
+                        163742,
+                        153507,
+                        148751,
+                        134338,
+                        134157,
+                        124590,
+                        116676,
+                        98675,
+                        98379,
+                        97806,
+                        94828,
+                        90957,
+                        79475,
+                        73197,
+                        57876,
+                        57222,
+                        57143,
+                        54351,
+                        51155,
+                        47078,
+                        38179,
+                        30757,
+                        28657,
+                        16387,
+                        11284,
+                        7386
+                    ]
+                },
+                {
+                    "header": "Circular",
+                    "id": "polished_assembly.contigs_table.circular",
+                    "values": [
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No",
+                        "No"
+                    ]
+                },
+                {
+                    "header": "Percent Polished",
+                    "id": "polished_assembly.contigs_table.frac_polished",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ]
+                },
+                {
+                    "header": "Number of Polishing Reads",
+                    "id": "polished_assembly.contigs_table.n_polishing_reads",
+                    "values": [
+                        17544,
+                        9055,
+                        6246,
+                        6973,
+                        6510,
+                        4090,
+                        4342,
+                        5148,
+                        3841,
+                        3629,
+                        3117,
+                        3424,
+                        3181,
+                        4198,
+                        3078,
+                        3001,
+                        2151,
+                        2003,
+                        2464,
+                        2212,
+                        2339,
+                        2689,
+                        1950,
+                        1624,
+                        1626,
+                        1366,
+                        1380,
+                        1349,
+                        1214,
+                        1012,
+                        1232,
+                        1015,
+                        1331,
+                        1398,
+                        1103,
+                        562,
+                        608,
+                        696,
+                        433,
+                        580,
+                        551,
+                        390,
+                        488,
+                        285,
+                        204,
+                        79,
+                        114
+                    ]
+                }
+            ],
+            "id": "polished_assembly.contigs_table",
+            "title": "Polished Contigs"
+        }
+    ],
+    "tags": [],
+    "title": "Report polished_assembly",
+    "uuid": "41e45e34-36ca-4876-99b2-8fde9bbcf90e",
+    "version": "1.0.1"
+}

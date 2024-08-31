@@ -1,0 +1,182 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Report motifs</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                font-size: 2rem; /* Use rem for scalability */
+                max-width: 100vw; /* Ensure body doesn't exceed viewport width */
+            }
+            h1 {
+                color: #333;
+                font-size: 3rem; /* Use rem for scalability */
+            }
+            h2 {
+                font-size: 2.8rem;
+            }
+            h3 {
+                font-size: 2.6rem;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                font-size: 0.8rem;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+                word-wrap: break-word; /* Allow text to wrap within cells */
+            }
+            th {
+                background-color: #f4f4f4;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                max-height: 100vh; /* Ensure the image doesn't overflow the viewport height */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Report motifs</h1>
+    <h2>Modified Base Motifs</h2>
+<table>
+<thead>
+<tr>
+<th>Motif</th>
+<th>Modified Position</th>
+<th>Modification Type</th>
+<th>% of Motifs Detected</th>
+<th># of Motifs Detected</th>
+<th># of Motifs in Genome</th>
+<th>Mean QV</th>
+<th>Mean Coverage</th>
+<th>Partner Motif</th>
+<th>Mean IPD ratio</th>
+<th>Group Tag</th>
+<th>Objective Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GATC</td>
+<td>2</td>
+<td>m6A</td>
+<td>0.9694581</td>
+<td>13776</td>
+<td>14210</td>
+<td>75.37268</td>
+<td>29.938444</td>
+<td>GATC</td>
+<td>4.4114532</td>
+<td>GATC</td>
+<td>1009748.5</td>
+</tr>
+<tr>
+<td>CAAGCAC</td>
+<td>6</td>
+<td>m6A</td>
+<td>0.991727</td>
+<td>959</td>
+<td>967</td>
+<td>117.84046</td>
+<td>32.046925</td>
+<td></td>
+<td>4.561313</td>
+<td>CAAGCAC</td>
+<td>112167.22</td>
+</tr>
+<tr>
+<td>SCCCGCAD</td>
+<td>7</td>
+<td>m6A</td>
+<td>0.52900654</td>
+<td>1459</td>
+<td>2758</td>
+<td>73.16381</td>
+<td>33.422207</td>
+<td></td>
+<td>3.9857779</td>
+<td>SCCCGCAD</td>
+<td>60181.992</td>
+</tr>
+<tr>
+<td>RCDDB</td>
+<td>2</td>
+<td>m4C</td>
+<td>0.014165852</td>
+<td>16588</td>
+<td>1170985</td>
+<td>45.097782</td>
+<td>36.09718</td>
+<td></td>
+<td>1.9323654</td>
+<td>RCDDB</td>
+<td>16220.627</td>
+</tr>
+<tr>
+<td>GNCYGVDCA</td>
+<td>3</td>
+<td>m4C</td>
+<td>0.16902933</td>
+<td>1562</td>
+<td>9241</td>
+<td>46.37452</td>
+<td>35.544174</td>
+<td></td>
+<td>2.16002</td>
+<td>GNCYGVDCA</td>
+<td>7728.4663</td>
+</tr>
+<tr>
+<td>BNNNCCCGCAMR</td>
+<td>10</td>
+<td>m6A</td>
+<td>0.3717742</td>
+<td>461</td>
+<td>1240</td>
+<td>78.6551</td>
+<td>33.524944</td>
+<td></td>
+<td>3.9345338</td>
+<td>BNNNCCCGCAMR</td>
+<td>3920.2266</td>
+</tr>
+<tr>
+<td>HNNC</td>
+<td>4</td>
+<td>m4C</td>
+<td>0.005055691</td>
+<td>19783</td>
+<td>3913016</td>
+<td>44.066067</td>
+<td>36.35955</td>
+<td></td>
+<td>1.872847</td>
+<td>HNNC</td>
+<td>361.00958</td>
+</tr>
+</tbody>
+</table>
+<h2>Modification QVs</h2>
+<img src='motif_histogram.png' alt='Modification QVs' />
+<h2>ModQV Versus Coverage By Motif</h2>
+<img src='motif_modqv_coverage_GATC.png' alt='None' />
+<img src='motif_modqv_coverage_CAAGCAC.png' alt='None' />
+<img src='motif_modqv_coverage_SCCCGCAD.png' alt='None' />
+<img src='motif_modqv_coverage_RCDDB.png' alt='None' />
+<img src='motif_modqv_coverage_GNCYGVDCA.png' alt='None' />
+<img src='motif_modqv_coverage_BNNNCCCGCAMR.png' alt='None' />
+<img src='motif_modqv_coverage_HNNC.png' alt='None' />
+<img src='motif_modqv_coverage_NoMotif.png' alt='None' />
+
+    </body>
+    </html>
+    

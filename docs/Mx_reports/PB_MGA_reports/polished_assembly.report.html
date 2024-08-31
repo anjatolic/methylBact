@@ -1,0 +1,437 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Report polished_assembly</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                font-size: 2rem; /* Use rem for scalability */
+                max-width: 100vw; /* Ensure body doesn't exceed viewport width */
+            }
+            h1 {
+                color: #333;
+                font-size: 3rem; /* Use rem for scalability */
+            }
+            h2 {
+                font-size: 2.8rem;
+            }
+            h3 {
+                font-size: 2.6rem;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                font-size: 0.8rem;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+                word-wrap: break-word; /* Allow text to wrap within cells */
+            }
+            th {
+                background-color: #f4f4f4;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                max-height: 100vh; /* Ensure the image doesn't overflow the viewport height */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Report polished_assembly</h1>
+    <h2>Summary Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Contig Type</th>
+<th>Polished Contigs</th>
+<th>Maximum Contig Length</th>
+<th>Mean Contig Length</th>
+<th>Median Contig Length</th>
+<th>N50 Contig Length</th>
+<th>Sum of Contig Lengths</th>
+<th>E-size (sum of squares / sum)</th>
+<th>Number of Circular Contigs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary Contigs</td>
+<td>47</td>
+<td>996568</td>
+<td>198546</td>
+<td>148751</td>
+<td>309811</td>
+<td>9331677</td>
+<td>368836.50423509086</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Haplotigs</td>
+<td>63</td>
+<td>19498</td>
+<td>11270</td>
+<td>11144</td>
+<td>12764</td>
+<td>710062</td>
+<td>12546.758775994209</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2>Polished Contigs</h2>
+<table>
+<thead>
+<tr>
+<th>Contig</th>
+<th>Length (bases)</th>
+<th>Circular</th>
+<th>Percent Polished</th>
+<th>Number of Polishing Reads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctg.s1/p/l/000000/0</td>
+<td>996568</td>
+<td>No</td>
+<td>1.0</td>
+<td>17544</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000001/0</td>
+<td>557444</td>
+<td>No</td>
+<td>1.0</td>
+<td>9055</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000002/0</td>
+<td>516981</td>
+<td>No</td>
+<td>1.0</td>
+<td>6246</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000003/0</td>
+<td>488324</td>
+<td>No</td>
+<td>1.0</td>
+<td>6973</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000004/0</td>
+<td>467118</td>
+<td>No</td>
+<td>1.0</td>
+<td>6510</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000005/0</td>
+<td>379215</td>
+<td>No</td>
+<td>1.0</td>
+<td>4090</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000006/0</td>
+<td>361771</td>
+<td>No</td>
+<td>1.0</td>
+<td>4342</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000007/0</td>
+<td>350392</td>
+<td>No</td>
+<td>1.0</td>
+<td>5148</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000008/0</td>
+<td>349370</td>
+<td>No</td>
+<td>1.0</td>
+<td>3841</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000009/0</td>
+<td>309811</td>
+<td>No</td>
+<td>1.0</td>
+<td>3629</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000010/0</td>
+<td>282544</td>
+<td>No</td>
+<td>1.0</td>
+<td>3117</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000011/0</td>
+<td>265126</td>
+<td>No</td>
+<td>1.0</td>
+<td>3424</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000012/0</td>
+<td>264499</td>
+<td>No</td>
+<td>1.0</td>
+<td>3181</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000013/0</td>
+<td>263427</td>
+<td>No</td>
+<td>1.0</td>
+<td>4198</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000014/0</td>
+<td>253424</td>
+<td>No</td>
+<td>1.0</td>
+<td>3078</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000015/0</td>
+<td>231761</td>
+<td>No</td>
+<td>1.0</td>
+<td>3001</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000016/0</td>
+<td>223982</td>
+<td>No</td>
+<td>1.0</td>
+<td>2151</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000017/0</td>
+<td>186107</td>
+<td>No</td>
+<td>1.0</td>
+<td>2003</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000018/0</td>
+<td>183286</td>
+<td>No</td>
+<td>1.0</td>
+<td>2464</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000019/0</td>
+<td>168908</td>
+<td>No</td>
+<td>1.0</td>
+<td>2212</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000020/0</td>
+<td>165066</td>
+<td>No</td>
+<td>1.0</td>
+<td>2339</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000021/0</td>
+<td>163742</td>
+<td>No</td>
+<td>1.0</td>
+<td>2689</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000022/0</td>
+<td>153507</td>
+<td>No</td>
+<td>1.0</td>
+<td>1950</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000023/0</td>
+<td>148751</td>
+<td>No</td>
+<td>1.0</td>
+<td>1624</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000024/0</td>
+<td>134338</td>
+<td>No</td>
+<td>1.0</td>
+<td>1626</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000025/0</td>
+<td>134157</td>
+<td>No</td>
+<td>1.0</td>
+<td>1366</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000026/0</td>
+<td>124590</td>
+<td>No</td>
+<td>1.0</td>
+<td>1380</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000027/0</td>
+<td>116676</td>
+<td>No</td>
+<td>1.0</td>
+<td>1349</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000028/0</td>
+<td>98675</td>
+<td>No</td>
+<td>1.0</td>
+<td>1214</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000029/0</td>
+<td>98379</td>
+<td>No</td>
+<td>1.0</td>
+<td>1012</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000030/0</td>
+<td>97806</td>
+<td>No</td>
+<td>1.0</td>
+<td>1232</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000031/0</td>
+<td>94828</td>
+<td>No</td>
+<td>1.0</td>
+<td>1015</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000032/0</td>
+<td>90957</td>
+<td>No</td>
+<td>1.0</td>
+<td>1331</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000033/0</td>
+<td>79475</td>
+<td>No</td>
+<td>1.0</td>
+<td>1398</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000034/0</td>
+<td>73197</td>
+<td>No</td>
+<td>1.0</td>
+<td>1103</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000035/0</td>
+<td>57876</td>
+<td>No</td>
+<td>1.0</td>
+<td>562</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000036/0</td>
+<td>57222</td>
+<td>No</td>
+<td>1.0</td>
+<td>608</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000037/0</td>
+<td>57143</td>
+<td>No</td>
+<td>1.0</td>
+<td>696</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000038/0</td>
+<td>54351</td>
+<td>No</td>
+<td>1.0</td>
+<td>433</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000039/0</td>
+<td>51155</td>
+<td>No</td>
+<td>1.0</td>
+<td>580</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000040/0</td>
+<td>47078</td>
+<td>No</td>
+<td>1.0</td>
+<td>551</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000041/0</td>
+<td>38179</td>
+<td>No</td>
+<td>1.0</td>
+<td>390</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000042/0</td>
+<td>30757</td>
+<td>No</td>
+<td>1.0</td>
+<td>488</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000043/0</td>
+<td>28657</td>
+<td>No</td>
+<td>1.0</td>
+<td>285</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000044/0</td>
+<td>16387</td>
+<td>No</td>
+<td>1.0</td>
+<td>204</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000045/0</td>
+<td>11284</td>
+<td>No</td>
+<td>1.0</td>
+<td>79</td>
+</tr>
+<tr>
+<td>ctg.s1/p/l/000046/0</td>
+<td>7386</td>
+<td>No</td>
+<td>1.0</td>
+<td>114</td>
+</tr>
+</tbody>
+</table>
+<h2>Contig Length Distribution</h2>
+<img src='contig_lengths_hist.png' alt='Contig Length Distribution' />
+
+    </body>
+    </html>
+    
