@@ -25,7 +25,8 @@ This repository contains scripts used for analysing DNA methylation in bacteria.
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/PipelineOverview%20ONT.png)
 
-List of links for all reports generated as part of the analysis
+
+## **List of links for all reports generated as part of the analysis**
 
 | **Organism**               | **Report**            | **Pipeline**          | **Link**                                                                                                   |
 |----------------------------|-----------------------|-----------------------|------------------------------------------------------------------------------------------------------------|
