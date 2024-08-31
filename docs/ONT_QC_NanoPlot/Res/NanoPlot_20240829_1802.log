@@ -1,0 +1,23 @@
+2024-08-29 18:02:11,556 NanoPlot 1.42.0 started with arguments Namespace(threads=2, verbose=False, store=False, raw=False, huge=False, outdir='/mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=False, title=None, font_scale=1, dpi=100, hide_stats=False, fastq=['/mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/CVM64_Rhizobium_leguminosarum_5kHz_res.fastq'], fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=None, cram=None, pickle=None, feather=None, path='/mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/')
+2024-08-29 18:02:11,556 Python version is: 3.10.14 | packaged by conda-forge | (main, Mar 20 2024, 12:45:18) [GCC 12.3.0]
+2024-08-29 18:02:11,586 Nanoget: Starting to collect statistics from plain fastq file.
+2024-08-29 18:02:15,893 Reduced DataFrame memory usage from 0.10504150390625Mb to 0.10504150390625Mb
+2024-08-29 18:02:15,903 Nanoget: Gathered all metrics of 6876 reads
+2024-08-29 18:02:15,922 Calculated statistics
+2024-08-29 18:02:15,924 Using sequenced read lengths for plotting.
+2024-08-29 18:02:15,929 NanoPlot:  Valid color #4CB391.
+2024-08-29 18:02:15,930 NanoPlot:  Valid colormap Greens.
+2024-08-29 18:02:15,930 NanoPlot:  Creating length plots for Read length.
+2024-08-29 18:02:15,931 NanoPlot:  Using 6876 reads maximum of 95837bp.
+2024-08-29 18:02:17,653 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/WeightedHistogramReadlength  as png (or png for --legacy)
+2024-08-29 18:02:19,291 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/WeightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2024-08-29 18:02:20,933 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/Non_weightedHistogramReadlength  as png (or png for --legacy)
+2024-08-29 18:02:22,553 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/Non_weightedLogTransformed_HistogramReadlength  as png (or png for --legacy)
+2024-08-29 18:02:25,325 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/Yield_By_Length  as png (or png for --legacy)
+2024-08-29 18:02:25,327 Created length plots
+2024-08-29 18:02:25,328 NanoPlot: Creating Read lengths vs Average read quality plots using 6876 reads.
+2024-08-29 18:02:27,591 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/LengthvsQualityScatterPlot_dot  as png (or png for --legacy)
+2024-08-29 18:02:30,320 Saved /mnt/beegfs/home/s434472/Thesis_AT/QC_1/NanoPlot_ont/Res/LengthvsQualityScatterPlot_kde  as png (or png for --legacy)
+2024-08-29 18:02:30,321 Created LengthvsQual plot
+2024-08-29 18:02:30,322 Writing html report.
+2024-08-29 18:02:30,342 Finished!
