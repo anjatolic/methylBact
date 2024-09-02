@@ -9,9 +9,22 @@ Supervisors: Dr Tomasz Kurowski and Dr Alexey Larionov
 Microbial DNA methylation is targeted to specific sequence motifs and can play different roles, from protecting the cell through restriction-modification systems, to regulating DNA replication and gene expression. The third generation long-read sequencing technologies allow direct detection of base modifications and are constantly refined alongside bioinformatic analysis tools, providing improved precision and accuracy. To keep up with the advancements, this project aims to assess select current bioinformatics tools for analyzing microbial epigenetic marks. Using latest tools’ versions, main methylation target motifs were identified from both PacBio and ONT data. In addition to using a predefined workflow, PacBio data was also analysed by a custom-devised pipeline that was able to identify target motifs with over 95% methylation after adjustment of Minimum Qmod Score. Utility and limitations of each analysis approach were thoroughly explored providing a comprehensive overview of current analysis options and paving the way to future, more complex metaepigenomic analysis.
 </p>
 
-This repository contains scripts used for analysing DNA methylation in bacteria. Following pipelines were used for the analysis:
+## **Datasets availability**
+
+|    <br>Species                      |    <br>Strain                       |    <br>System    |    <br>Platform                  |    <br>Format              |    <br>Ref. genome                                         |    <br>Ref.                                   |   |
+|-------------------------------------|-------------------------------------|------------------|----------------------------------|----------------------------|------------------------------------------------------------|-----------------------------------------------|---|
+|    <br>Streptococcus agalactiae     |    <br>clinical   isolate NEM316    |    <br>PacBio    |    <br>Sequel   II               |    <br>BAM   (CCS)         |    <br>https://www.ncbi.nlm.nih.gov/nuccore/NC_004368.1    |     <br>(Manzer & Doran, 2024)                |   |
+| Streptococcus agalactiae            |    <br>clinical   isolate CJB111    |    <br>PacBio    |    <br>Sequel   II               |    <br>BAM   (CCS)         |    <br>https://www.ncbi.nlm.nih.gov/nuccore/CP063198       |                                               |   |
+|    <br>Myxococcus xanthus           |    <br>DZ2                          |    <br>PacBio    |    <br>Sequel   II               |    <br>BAM   (subreads)    |    <br>https://www.ncbi.nlm.nih.gov/nuccore/CP070500       |     <br>(Jain et al., 2021)                   |   |
+|    <br>Rhizobium leguminosarum      |    <br>ATCC   10004                 |    <br>ONT       |    <br>MinION R10.4.1 (5 kHz)    |    <br>POD5                |    <br>Provided with the data                              |     <br>(Crits-Christoph et    al., 2023)     |   |
+
+Crits-Christoph, A., Kang, S. C., Lee, H. H., & Ostrov, N. (2023). MicrobeMod: A computational toolkit for identifying prokaryotic methylation and restriction-modification with nanopore sequencing. BioRxiv, 2023.11.13.566931. https://doi.org/10.1101/2023.11.13.566931
+Jain, R., Habermann, B. H., Mignot, T., & Stewart, F. J. (2021). Complete Genome Assembly of Myxococcus xanthus Strain DZ2 Using Long High-Fidelity (HiFi) Reads Generated with PacBio Technology. Microbiology Resource Announcements, 10(28). https://doi.org/10.1128/MRA.00530-21
+Manzer, H. S., & Doran, K. S. (2024). Complete m6A and m4C methylomes for group B streptococcal clinical isolates CJB111, A909, COH1, and NEM316. Microbiology Resource Announcements, 13(1). https://doi.org/10.1128/MRA.00733-23/ASSET/3F8A8632-BC9D-48FC-A231-B305F66EFA60/ASSETS/IMAGES/LARGE/MRA.00733-23.F001.JPG
 
 ## **Pipelines:**
+
+This repository contains scripts used for analysing DNA methylation in bacteria. Following pipelines were used for the analysis:
 
 ### **PacBio Microbial Genome Analysis workflow**
 <p align="justify">
@@ -55,15 +68,15 @@ MicrobeMod annotate_rm was can identify genes potentially involved in DNA methyl
 | **_S. agalactiae CJB111_** | coverage              | Custom                | https://anjatolic.github.io/methylBact/CJB111_reports/PB_custom_pipeline_reports/coverage.report.html      |
 |                            | mapping stats         | Custom                | https://anjatolic.github.io/methylBact/CJB111_reports/PB_custom_pipeline_reports/mapping_stats.report.html |
 |                            | coverage              | MGA workflow Qmod 250 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/coverage.report.html          |
-|                            | mapping stats         | MGA workflow Qmod 251 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/mapping_stats.report.html     |
-|                            | polished assembly     | MGA workflow Qmod 252 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/polished_assembly.report.html |
-|                            | modifications         | MGA workflow Qmod 253 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/modifications.report.html     |
-|                            | motifs                | MGA workflow Qmod 254 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/motifs.report.html            |
+|                            | mapping stats         | MGA workflow Qmod 250 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/mapping_stats.report.html     |
+|                            | polished assembly     | MGA workflow Qmod 250 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/polished_assembly.report.html |
+|                            | modifications         | MGA workflow Qmod 250 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/modifications.report.html     |
+|                            | motifs                | MGA workflow Qmod 250 | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod250/motifs.report.html            |
 |                            | coverage              | MGA workflow Qmod 35  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/coverage.report.html           |
-|                            | mapping stats         | MGA workflow Qmod 36  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/mapping_stats.report.html      |
-|                            | polished assembly     | MGA workflow Qmod 37  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/polished_assembly.report.html  |
-|                            | modifications         | MGA workflow Qmod 38  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/modifications.report.html      |
-|                            | motifs                | MGA workflow Qmod 39  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/motifs.report.html             |
+|                            | mapping stats         | MGA workflow Qmod 35  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/mapping_stats.report.html      |
+|                            | polished assembly     | MGA workflow Qmod 35  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/polished_assembly.report.html  |
+|                            | modifications         | MGA workflow Qmod 35  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/modifications.report.html      |
+|                            | motifs                | MGA workflow Qmod 35  | https://anjatolic.github.io/methylBact/CJB111_reports/PB_MGA_reports_Qmod35/motifs.report.html             |
 |                            | runQC                 | PacBio runQC          | https://anjatolic.github.io/methylBact/CJB111_reports/QC/ccs.report.html                                   |
 | **_M.xanthus_**            | coverage              | Custom                | https://anjatolic.github.io/methylBact/Mx_reports/PB_custom_pipeline_reports/coverage.report.html          |
 |                            | mapping stats         | Custom                | https://anjatolic.github.io/methylBact/Mx_reports/PB_custom_pipeline_reports/mapping_stats.report.html     |
