@@ -30,11 +30,12 @@ Manzer, H. S., & Doran, K. S. (2024). Complete m6A and m4C methylomes for group 
 This repository contains scripts used for analysing DNA methylation in bacteria. Following pipelines were used for the analysis:
 
 ### **PacBio Microbial Genome Analysis workflow**
+
+![Model](https://github.com/anjatolic/methylBact/blob/main/pb_wf.drawio.png)
+
 <p align="justify">
 Microbial genome analysis workflow has several stages that include: assembly of large contigs, assembly of plasmids, alignment of input data to assembled contigs, polishing and base modification detection. The assembly steps are done by IPA tool for HiFi genome assembly and polishing is performed by Racon. Modification detection includes both detection of methylation and identification of methylated motifs. The input files have to be provided in XML format. To make XML file using raw BAM files ‘dataset create’ SMRT tool was used. PacBio uses Cromwell as its official workflow manager and has its own wrapper for it – ‘pbcromwell’ that is used to run the analysis by ‘pbcromwell run pb_microbial_analysis’ command.
 </p>
-
-![Model](https://github.com/anjatolic/methylBact/blob/main/pb_wf.drawio.png)
 
 ### **PacBio custom pipeline**
 <p align="justify">
