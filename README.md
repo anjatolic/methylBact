@@ -35,6 +35,7 @@ Microbial genome analysis workflow has several stages that include: assembly of 
 </p>
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_wf.drawio.png)
+
 Microbial genome analysis workflow 
 
 ### **PacBio custom pipeline**
@@ -43,6 +44,7 @@ For the analysis of PacBio data additional custom pipeline was designed focusing
 </p>
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_custom.drawio.png)
+
 Custom designed DNA methylation analysis pipeline
 
 ### **ONT - MicrobeMod https://github.com/cultivarium/MicrobeMod**
@@ -55,6 +57,7 @@ MicrobeMod annotate_rm can identify genes potentially involved in DNA methylatio
 </p>
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/PipelineOverview%20ONT.png)
+
 MicrobeMod toolkit workflow
 
 ## **List of links for all reports generated as part of the analysis**
