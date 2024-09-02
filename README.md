@@ -46,8 +46,10 @@ For the analysis of PacBio data additional custom pipeline was designed focusing
 ### **ONT - MicrobeMod https://github.com/cultivarium/MicrobeMod**
 <p align="justify">
 ONT data was first preprocessed by basecalling with Dorado, followed by mapping reads to reference by minimap2 (Figure 2 3). Basecalling was done by using either latest Dorado model (v5.0.0.) or Rerio research model that is optimised for highly methylated bacterial DNA. In addition to that, compatible official Dorado modification models were used for m6A, m4C and 5mC methylation calling.
+  
 MicrobeMod call_methylation workflow workflow first identifies methylated sites and extracts methylation frequencies with Modkit tool. Next, 24 bases long sequences, surrounding highly methylated positions, are extracted and analysed with STREME that can identify significantly enriched motifs. Finally, fraction of methylated motif occurrences is recorded.
-MicrobeMod annotate_rm was can identify genes potentially involved in DNA methylation and restriction. This is achieved by the use of prodigal, HHMER and cath-resolve-hits tools. Next, BLASTP is used to find gene homologs in REBASE database, in order to, when available, include additional information on target motifs for MTases coded by identified genes.
+
+MicrobeMod annotate_rm can identify genes potentially involved in DNA methylation and restriction. This is achieved by the use of prodigal, HHMER and cath-resolve-hits tools. Next, BLASTP is used to find gene homologs in REBASE database, in order to, when available, include additional information on target motifs for MTases coded by identified genes.
 </p>
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/PipelineOverview%20ONT.png)
