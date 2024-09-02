@@ -18,8 +18,11 @@ Microbial DNA methylation is targeted to specific sequence motifs and can play d
 |    <br>Myxococcus xanthus           |    <br>DZ2                          |    <br>PacBio    |    <br>Sequel   II               |    <br>BAM   (subreads)    |    <br>https://www.ncbi.nlm.nih.gov/nuccore/CP070500       |     <br>(Jain et al., 2021)                   |   |
 |    <br>Rhizobium leguminosarum      |    <br>ATCC   10004                 |    <br>ONT       |    <br>MinION R10.4.1 (5 kHz)    |    <br>POD5                |    <br>Provided with the data                              |     <br>(Crits-Christoph et    al., 2023)     |   |
 
+
 Crits-Christoph, A., Kang, S. C., Lee, H. H., & Ostrov, N. (2023). MicrobeMod: A computational toolkit for identifying prokaryotic methylation and restriction-modification with nanopore sequencing. BioRxiv, 2023.11.13.566931. https://doi.org/10.1101/2023.11.13.566931
+
 Jain, R., Habermann, B. H., Mignot, T., & Stewart, F. J. (2021). Complete Genome Assembly of Myxococcus xanthus Strain DZ2 Using Long High-Fidelity (HiFi) Reads Generated with PacBio Technology. Microbiology Resource Announcements, 10(28). https://doi.org/10.1128/MRA.00530-21
+
 Manzer, H. S., & Doran, K. S. (2024). Complete m6A and m4C methylomes for group B streptococcal clinical isolates CJB111, A909, COH1, and NEM316. Microbiology Resource Announcements, 13(1). https://doi.org/10.1128/MRA.00733-23/ASSET/3F8A8632-BC9D-48FC-A231-B305F66EFA60/ASSETS/IMAGES/LARGE/MRA.00733-23.F001.JPG
 
 ## **Pipelines:**
