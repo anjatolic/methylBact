@@ -14,14 +14,25 @@ This repository contains scripts used for analysing DNA methylation in bacteria.
 ## **Pipelines:**
 
 ### **PacBio Microbial Genome Analysis workflow**
+<p align="justify">
+Microbial genome analysis workflow has several stages that include: assembly of large contigs, assembly of plasmids, alignment of input data to assembled contigs, polishing and base modification detection. The assembly steps are done by IPA tool for HiFi genome assembly and polishing is performed by Racon. Modification detection includes both detection of methylation and identification of methylated motifs. The input files have to be provided in XML format. To make XML file using raw BAM files ‘dataset create’ SMRT tool was used. PacBio uses Cromwell as its official workflow manager and has its own wrapper for it – ‘pbcromwell’ that is used to run the analysis by ‘pbcromwell run pb_microbial_analysis’ command.
+</p>
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_wf.drawio.png)
 
 ### **PacBio custom pipeline**
+<p align="justify">
+For the analysis of PacBio data additional custom pipeline was designed focusing on DNA methylation analysis and omitting the genome assembly steps as all of the analysed data have appropriate reference genome files available. First steps in the pipeline include conditional data preprocessing with ‘ccs-kinetics-bystrandify’ tool and XML file creation with ‘dataset create’. Reference and datase XML files were used as input to ‘pb_align_ccs’ workflow that aligns data to reference and outputs alignment BAM and coverage GFF files. Alignment file was then used as input for ‘ipdSummary’ tool that identifies modifications (m6A and m4C). Its output, a GFF file, was input for ‘motifMaker’ tool, performing motif identification and creating CSV file of motifs and updating modification GFF file with motif information. The coverage GFF file from the alignment step was used by ‘summarizeModifications’ tool to create modification summary GFF file, and a custom script was made to plot the data.
+</p>
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/pb_custom.drawio.png)
 
 ### **ONT - MicrobeMod https://github.com/cultivarium/MicrobeMod**
+<p align="justify">
+ONT data was first preprocessed by basecalling with Dorado, followed by mapping reads to reference by minimap2 (Figure 2 3). Basecalling was done by using either latest Dorado model (v5.0.0.) or Rerio research model that is optimised for highly methylated bacterial DNA. In addition to that, compatible official Dorado modification models were used for m6A, m4C and 5mC methylation calling.
+MicrobeMod call_methylation workflow workflow first identifies methylated sites and extracts methylation frequencies with Modkit tool. Next, 24 bases long sequences, surrounding highly methylated positions, are extracted and analysed with STREME that can identify significantly enriched motifs. Finally, fraction of methylated motif occurrences is recorded.
+MicrobeMod annotate_rm was can identify genes potentially involved in DNA methylation and restriction. This is achieved by the use of prodigal, HHMER and cath-resolve-hits tools. Next, BLASTP is used to find gene homologs in REBASE database, in order to, when available, include additional information on target motifs for MTases coded by identified genes.
+</p>
 
 ![Model](https://github.com/anjatolic/methylBact/blob/main/PipelineOverview%20ONT.png)
 
